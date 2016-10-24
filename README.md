@@ -18,3 +18,16 @@ At the end the necessary instructions to get GUI interface were added to the Doc
 Actually all was tested only on Ubunu 16.04 with Docker 1.12.2
 
 To connet to the X11 socket the user used by the image and the local user must have the same user and group id (e.g 1000)  
+
+Build with:
+```sh
+docker build -t dicer/eclipse .
+```
+Launch with:
+```sh
+docker run -ti --rm \
+           -e DISPLAY=$DISPLAY \
+           -v /tmp/.X11-unix:/tmp/.X11-unix \
+           -v SOME_LOCAL_DIR:/workspace \
+           dicer/eclipse
+```
