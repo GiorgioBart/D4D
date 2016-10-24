@@ -1,0 +1,31 @@
+./eclipse \
+-nosplash \
+-application org.eclipse.equinox.p2.director \
+-repository http://download.eclipse.org/ecoretools/updates/releases/3.1.0/neon \
+-installIU  org.eclipse.emf.ecoretools.explorer.contextual.feature.group/3.1.0.201605311155 \
+-installIU  org.eclipse.emf.ecoretools.design.feature.group/3.1.0.201605311155 \
+-installIU  org.eclipse.emf.ecoretools.sdk.feature.group/3.1.0.201605311155 \
+-repository http://download.eclipse.org/modeling/emf/updates/releases/ \
+-installIU  org.eclipse.emf.examples.source.feature.group/2.4.0.v200902171115 \
+-installIU  org.eclipse.emf.ecore.sdo.feature.group/2.4.0.v200902171115 \
+-installIU  org.eclipse.emf.ecore.sdo.doc.feature.group/2.4.0.v200902171115 \
+-installIU  org.eclipse.emf.ecore.sdo.edit.feature.group/2.4.0.v200902171115 \
+-installIU  org.eclipse.emf.ecore.sdo.editor.feature.group/2.4.0.v200902171115 \
+-installIU  org.eclipse.emf.ecore.sdo.sdk.feature.group/2.4.0.v200902171115 \
+-installIU  org.eclipse.emf.ecore.sdo.source.feature.group/2.4.0.v200902171115 \
+-repository http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/ \
+-installIU  org.eclipse.gmf.examples.runtime.feature.group/1.10.0.201606071959 \
+-installIU  org.eclipse.gmf.examples.runtime.ui.pde.feature.group/1.10.0.201606071959 \
+-installIU  org.eclipse.gmf.runtime.sdk.feature.group/1.10.0.201606071959 \
+-installIU  org.eclipse.gmf.source.feature.group/1.10.0.201606071959 \
+-installIU  org.eclipse.gmf.tests.runtime.feature.group/1.10.0.201606071959 \
+-installIU  org.eclipse.gmf.runtime.thirdparty.source.feature.group/1.10.0.201606071959 \
+-repository http://download.eclipse.org/releases/neon \
+-installIU  org.eclipse.xsd.feature.group/2.12.0.v20160526-0356 \
+-installIU  org.eclipse.xsd.ecore.converter.feature.group/2.9.0.v20160526-0356 \
+-installIU  org.eclipse.xsd.edit.feature.group/2.9.0.v20160526-0356 \
+-installIU  org.eclipse.xsd.sdk.feature.group/2.12.0.v20160526-0356 \
+-installIU  org.eclipse.xsd.mapping.feature.group/2.9.0.v20160526-0356 \
+-installIU  org.eclipse.xsd.mapping.editor.feature.group/2.9.0.v20160526-0356 \
+-destination /home/giorgio/Scrivania/eclipse
+

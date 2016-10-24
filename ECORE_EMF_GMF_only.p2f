@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?p2f version='1.0.0'?>
+<p2f version='1.0.0'>
+  <ius size='22'>
+    <iu id='org.eclipse.emf.ecoretools.explorer.contextual.feature.group' name='Amalgam Contextual Explorer categories for Ecore models' version='3.1.0.201605311155'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ecoretools/updates/releases/3.1.0/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecoretools.design.feature.group' name='Ecore Diagram Editor' version='3.1.0.201605311155'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ecoretools/updates/releases/3.1.0/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecoretools.sdk.feature.group' name='Ecore Diagram Editor (SDK)' version='3.1.0.201605311155'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/ecoretools/updates/releases/3.1.0/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.examples.source.feature.group' name='EMF Examples Source' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecore.sdo.feature.group' name='EMF SDO - Service Data Objects Runtime' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecore.sdo.doc.feature.group' name='EMF SDO Documentation' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecore.sdo.edit.feature.group' name='EMF SDO Edit' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecore.sdo.editor.feature.group' name='EMF SDO Editor' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecore.sdo.sdk.feature.group' name='EMF SDO SDK - Service Data Objects SDK' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.emf.ecore.sdo.source.feature.group' name='EMF SDO Source' version='2.4.0.v200902171115'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gmf.examples.runtime.feature.group' name='Graphical Modeling Framework (GMF) Runtime Examples' version='1.10.0.201606071959'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gmf.examples.runtime.ui.pde.feature.group' name='Graphical Modeling Framework (GMF) Runtime Plug-in Examples' version='1.10.0.201606071959'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gmf.runtime.sdk.feature.group' name='Graphical Modeling Framework (GMF) Runtime SDK' version='1.10.0.201606071959'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gmf.source.feature.group' name='Graphical Modeling Framework (GMF) Runtime Sources' version='1.10.0.201606071959'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gmf.tests.runtime.feature.group' name='Graphical Modeling Framework (GMF) Runtime Tests' version='1.10.0.201606071959'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.gmf.runtime.thirdparty.source.feature.group' name='Graphical Modeling Framework (GMF) Runtime Third-Party Component Sources' version='1.10.0.201606071959'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.xsd.feature.group' name='XSD - XML Schema Definition Runtime' version='2.12.0.v20160526-0356'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.xsd.ecore.converter.feature.group' name='XSD Ecore Converter' version='2.9.0.v20160526-0356'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.xsd.edit.feature.group' name='XSD Edit' version='2.9.0.v20160526-0356'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.xsd.sdk.feature.group' name='XSD SDK - XML Schema Definition SDK' version='2.12.0.v20160526-0356'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.xsd.mapping.feature.group' name='XSD to Ecore Mapping' version='2.9.0.v20160526-0356'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/neon'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.xsd.mapping.editor.feature.group' name='XSD to Ecore Mapping Editor' version='2.9.0.v20160526-0356'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/neon'/>
+      </repositories>
+    </iu>
+  </ius>
+</p2f>
