@@ -27,5 +27,5 @@
 -installIU  org.eclipse.xsd.sdk.feature.group/2.12.0.v20160526-0356 \
 -installIU  org.eclipse.xsd.mapping.feature.group/2.9.0.v20160526-0356 \
 -installIU  org.eclipse.xsd.mapping.editor.feature.group/2.9.0.v20160526-0356 \
--destination /home/giorgio/Scrivania/eclipse
+-destination /opt/eclipse
 
