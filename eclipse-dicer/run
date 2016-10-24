@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -d /home/dicer/.eclipse ]; then
+  sudo chown dicer:dicer /home/dicer/.eclipse
+fi
+exec /opt/eclipse/eclipse -nosplash
+ 
+#exec /opt/eclipse/eclipse -noSplash -data /opt/STUFF/eclipse_work -configuration /opt/STUFF/eclipse_home -user /opt/STUFF/eclipse_home 
