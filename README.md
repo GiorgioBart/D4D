@@ -31,3 +31,4 @@ docker run -ti --rm \
            -v SOME_LOCAL_DIR:/workspace \
            dicer/eclipse
 ```
+On Eclipse startup select `/workspace` as Eclipse workspace.
