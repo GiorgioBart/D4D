@@ -5,7 +5,7 @@ This project aims to build a Docker image suitable for using the DICER tool  htt
 
 To obtain this result it was necessary to add some plugin to the default installation of Eclipse and find a way to use Eclipse itself (a GUI application) via Docker.
 
-All start from this Eclipse release: http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/1a/eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz 
+We start from this Eclipse release: http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/1a/eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz 
 
 Then via equinox p2 were added the necessary Plugin (Ecore tools,GMF,EMF and the "Eclipse Reflective Ecore Model Diagram Editor"):  
 "Installation and updates are managed in Eclipse using a provisioning platform called p2. Fundamentally, p2 is a technology for provisioning and managing Eclipse- and Equinox-based applications."
@@ -31,4 +31,4 @@ docker run -ti --rm \
            -v SOME_LOCAL_DIR:/workspace \
            dicer/eclipse
 ```
-On Eclipse startup select `/workspace` as Eclipse workspace.
+The Eclipse workspace is defined in the `run` file that is added to the image so, on startup, you will not be asked to select workspace.
