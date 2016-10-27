@@ -55,7 +55,8 @@ RUN apt-get install -y --no-install-recommends \
          libgtk2.0-0 \
          libcanberra-gtk-module \
          light-themes \
-         git && \
+         git \
+         unzip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /usr/lib/jvm/java-8-oracle/lib/missioncontrol && \
@@ -66,13 +67,18 @@ ADD net.sourceforge.dynamicgmf.diagram_0.2.1.jar /opt/eclipse/dropins/
 
 RUN chmod +x /usr/local/bin/eclipse && \
     mkdir -p /home/dicer && \
+    mkdir -p /home/dicer/.eclipse && \
     echo "dicer:x:1000:1000:DICER,,,:/home/dicer:/bin/bash" >> /etc/passwd && \
     echo "dicer:x:1000:" >> /etc/group && \
     echo "dicer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/dicer && \
     chmod 0440 /etc/sudoers.d/dicer && \
     wget https://github.com/DICERs/DICER/releases/download/v0.1.0/dicer-full.zip -P /home/dicer && \
+    unzip /home/dicer/dicer-full.zip -d /home/dicer && \
     chown dicer:dicer -R /home/dicer && \
     chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
+
+ADD eclipse_home/*.* /home/dicer/.eclipse/
+ADD dicer.launch /home/dicer/
 
 USER dicer
 ENV HOME /home/dicer
