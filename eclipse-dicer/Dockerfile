@@ -5,7 +5,7 @@ ENV ECLIPSE_FILE eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz
 ENV ECLIPSE_FILE_URL http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/1a/$ECLIPSE_FILE
 
 
-
+#Istalling Java and Eclipse
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
     apt-get update && \
     apt-get install -yq --no-install-recommends software-properties-common && \
@@ -64,21 +64,22 @@ RUN apt-get install -y --no-install-recommends \
 
 ADD run /usr/local/bin/eclipse
 ADD net.sourceforge.dynamicgmf.diagram_0.2.1.jar /opt/eclipse/dropins/
+ADD com.seeq.eclipse.importprojects_1.3.0.jar /opt/eclipse/plugins/
+ADD D4D /opt/D4D
 
 RUN chmod +x /usr/local/bin/eclipse && \
     mkdir -p /home/dicer && \
-    mkdir -p /home/dicer/.eclipse && \
     echo "dicer:x:1000:1000:DICER,,,:/home/dicer:/bin/bash" >> /etc/passwd && \
     echo "dicer:x:1000:" >> /etc/group && \
     echo "dicer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/dicer && \
     chmod 0440 /etc/sudoers.d/dicer && \
     wget https://github.com/DICERs/DICER/releases/download/v0.1.0/dicer-full.zip -P /home/dicer && \
     unzip /home/dicer/dicer-full.zip -d /home/dicer && \
+    cp -R /home/dicer/dicer-core/models /opt/D4D && \
+    cp -R /home/dicer/dicer-core/metamodels /opt/D4D && \
     chown dicer:dicer -R /home/dicer && \
     chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
 
-ADD eclipse_home/*.* /home/dicer/.eclipse/
-ADD dicer.launch /home/dicer/
 
 USER dicer
 ENV HOME /home/dicer
