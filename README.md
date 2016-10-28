@@ -1,4 +1,4 @@
-# DfD Docker for Dicer
+# D4D Docker for Dicer
 Docker image for DICER modelling on custom Eclipse 
 
 This project aims to build a Docker image suitable for using the DICER tool  https://github.com/DICERs/DICER in a container.
