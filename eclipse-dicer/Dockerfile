@@ -68,7 +68,7 @@ RUN apt-get install -y --no-install-recommends \
          libxrender-dev \
          libxtst-dev \
          libgtk2.0-0 \
-         libcanberra-gtk-module \
+#         libcanberra-gtk-module \
          light-themes \
          git \
          unzip && \
@@ -95,6 +95,7 @@ RUN chmod +x /usr/local/bin/eclipse && \
     cp -R /home/dicer/dicer-core/models /opt/D4D && \
     cp -R /home/dicer/dicer-core/metamodels /opt/D4D && \
     chown dicer:dicer -R /home/dicer && \
+    chown dicer:dicer -R /opt/D4D && \
     chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
 
 
