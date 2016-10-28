@@ -1,8 +1,13 @@
 FROM ubuntu:14.04
 
-
-ENV ECLIPSE_FILE eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz
-ENV ECLIPSE_FILE_URL http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/1a/$ECLIPSE_FILE
+#RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
+#    apt-get update && \
+#    apt-get install -yq --no-install-recommends software-properties-common && \
+#    add-apt-repository ppa:webupd8team/java -y && apt-get update && \
+#    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+#    apt-get install -yq --no-install-recommends oracle-java8-installer && \
+#    wget $ECLIPSE_FILE_URL -O /tmp/eclipse.tar.gz -q && \
+#    tar -xf /tmp/eclipse.tar.gz -C /opt && rm /tmp/eclipse.tar.gz
 
 #RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
 #    apt-get update && \
@@ -16,8 +21,13 @@ ENV ECLIPSE_FILE_URL http://eclipse.c3sl.ufpr.br/technology/epp/downloads/releas
 #Istalling Java and Eclipse
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
     apt-get update && \
-    apt-get install -yq --no-install-recommends openjdk-8-jdk && \
-    wget $ECLIPSE_FILE_URL -O /tmp/eclipse.tar.gz -q && \
+    apt-get install -yq --no-install-recommends software-properties-common && \
+    add-apt-repository ppa:openjdk-r/ppa -y && \
+    apt-get update && \
+    apt-get install -yq --no-install-recommends openjdk-8-jdk wget && \
+    update-alternatives --config java && \
+    update-alternatives --config javac && \
+    wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/1a/eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz -O /tmp/eclipse.tar.gz -q && \
     tar -xf /tmp/eclipse.tar.gz -C /opt && rm /tmp/eclipse.tar.gz
 
 #Adding Eclipse's PlugIn
@@ -70,7 +80,7 @@ RUN apt-get install -y --no-install-recommends \
 
 ADD run /usr/local/bin/eclipse
 ADD net.sourceforge.dynamicgmf.diagram_0.2.1.jar /opt/eclipse/dropins/
-#ADD com.seeq.eclipse.importprojects_1.3.0.jar /opt/eclipse/plugins/
+ADD com.seeq.eclipse.importprojects_1.3.0.jar /opt/eclipse/plugins/
 ADD D4D /opt/D4D
 
 RUN chmod +x /usr/local/bin/eclipse && \
@@ -80,7 +90,7 @@ RUN chmod +x /usr/local/bin/eclipse && \
     echo "dicer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/dicer && \
     chmod 0440 /etc/sudoers.d/dicer && \
     wget https://github.com/DICERs/DICER/releases/download/v0.1.0/dicer-full.zip -P /home/dicer && \
-    wget https://github.com/seeq12/eclipse-import-projects-plugin/blob/master/jar/com.seeq.eclipse.importprojects_1.3.0.jar -P /opt/eclipse/plugins/ && \
+#    wget https://github.com/seeq12/eclipse-import-projects-plugin/blob/master/jar/com.seeq.eclipse.importprojects_1.3.0.jar -P /opt/eclipse/plugins/ && \
     unzip /home/dicer/dicer-full.zip -d /home/dicer && \
     cp -R /home/dicer/dicer-core/models /opt/D4D && \
     cp -R /home/dicer/dicer-core/metamodels /opt/D4D && \
