@@ -70,7 +70,7 @@ RUN apt-get install -y --no-install-recommends \
 
 ADD run /usr/local/bin/eclipse
 ADD net.sourceforge.dynamicgmf.diagram_0.2.1.jar /opt/eclipse/dropins/
-ADD com.seeq.eclipse.importprojects_1.3.0.jar /opt/eclipse/plugins/
+#ADD com.seeq.eclipse.importprojects_1.3.0.jar /opt/eclipse/plugins/
 ADD D4D /opt/D4D
 
 RUN chmod +x /usr/local/bin/eclipse && \
@@ -80,6 +80,7 @@ RUN chmod +x /usr/local/bin/eclipse && \
     echo "dicer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/dicer && \
     chmod 0440 /etc/sudoers.d/dicer && \
     wget https://github.com/DICERs/DICER/releases/download/v0.1.0/dicer-full.zip -P /home/dicer && \
+    wget https://github.com/seeq12/eclipse-import-projects-plugin/blob/master/jar/com.seeq.eclipse.importprojects_1.3.0.jar -P /opt/eclipse/plugins/ && \
     unzip /home/dicer/dicer-full.zip -d /home/dicer && \
     cp -R /home/dicer/dicer-core/models /opt/D4D && \
     cp -R /home/dicer/dicer-core/metamodels /opt/D4D && \
