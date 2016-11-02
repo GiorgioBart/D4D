@@ -63,7 +63,6 @@ RUN apt-get install -y --no-install-recommends \
 
 ADD run /usr/local/bin/eclipse
 ADD net.sourceforge.dynamicgmf.diagram_0.2.1.jar /opt/eclipse/dropins/
-#ADD com.seeq.eclipse.importprojects_1.3.0.jar /opt/eclipse/plugins/
 ADD D4D /opt/D4D
 
 RUN chmod +x /usr/local/bin/eclipse && \
