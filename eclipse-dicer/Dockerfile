@@ -1,13 +1,5 @@
 FROM ubuntu:14.04
 
-#RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
-#    apt-get update && \
-#    apt-get install -yq --no-install-recommends software-properties-common && \
-#    add-apt-repository ppa:webupd8team/java -y && apt-get update && \
-#    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-#    apt-get install -yq --no-install-recommends oracle-java8-installer && \
-#    wget $ECLIPSE_FILE_URL -O /tmp/eclipse.tar.gz -q && \
-#    tar -xf /tmp/eclipse.tar.gz -C /opt && rm /tmp/eclipse.tar.gz
 
 #Istalling Java and Eclipse
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
